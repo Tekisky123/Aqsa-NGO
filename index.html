@@ -876,6 +876,102 @@
         </section>
 
         <!-- 
+        contact us 
+        -->
+
+        <section class="contact-us">
+          <div class="container">
+            <h1 class="contact-title">Contact Us</h1>
+            <p class="contact-description">
+              AQSA GROUP FOUNDATION FOR UNDERPRIVILEGED COMMUNITY. Please
+              collaborate with us to support our NGO. Be a member of AOSA and
+              dedicate your free time to help those in need.
+            </p>
+
+            <div class="contact-content">
+              <div class="contact-details">
+                <h2 class="details-title">Get in Touch</h2>
+                <p class="details">
+                  <strong>Address:</strong> Ram Rahim Nagar, Degloor Naka,
+                  Nanded 431604
+                </p>
+                <p class="details"><strong>Phone:</strong> +91 9960 1817 51</p>
+                <p class="details">
+                  <strong>Email:</strong>
+                  <a
+                    href="mailto:aqsagroupfoundation@gmail.com"
+                    class="email-link"
+                    >aqsagroupfoundation@gmail.com</a
+                  >
+                </p>
+
+                <div class="helplines">
+                  <h2 class="helplines-title">Our Helplines</h2>
+                  <ul class="helpline-list">
+                    <li class="helpline-item">Aqsa Medical Helpline</li>
+                    <li class="helpline-item">Aqsa Disaster Helpline</li>
+                    <li class="helpline-item">Aqsa Orphanages Helpline</li>
+                    <li class="helpline-item">
+                      Aqsa Blood Directory Helpline: <strong>8087826109</strong>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <form
+                class="contact-form"
+                id="contactForm"
+                onsubmit="sendWhatsAppMessage(event)"
+              >
+                <h2 class="form-title">Send Us a Message</h2>
+                <div class="form-group">
+                  <label for="name">Name:</label>
+                  <input type="text" id="name" name="name" required />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email" required />
+                </div>
+                <div class="form-group">
+                  <label for="message">Message:</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="submit-button btn btn-primary">
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <script>
+          function sendWhatsAppMessage(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Get the values from the form
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+
+            // Construct the WhatsApp message
+            const whatsappNumber = "+919960181751"; // The phone number with country code
+            const whatsappMessage = `Name: ${name}\nEmail: ${email}\nMessage: ${message}`;
+
+            // Encode the message for URL
+            const encodedMessage = encodeURIComponent(whatsappMessage);
+
+            // Open WhatsApp
+            const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodedMessage}`;
+            window.open(whatsappUrl, "_blank"); // Open in a new tab
+          }
+        </script>
+
+        <!-- 
         - #INSTA POST
       -->
 
@@ -893,7 +989,6 @@
                   height="300"
                   loading="lazy"
                   alt="Video Thumbnail 1"
-                  class="img-cover"
                 />
                 <ion-icon name="logo-youtube"></ion-icon>
               </a>
@@ -911,25 +1006,7 @@
                   height="300"
                   loading="lazy"
                   alt="Video Thumbnail 2"
-                  class="img-cover"
-                />
-                <ion-icon name="logo-youtube"></ion-icon>
-              </a>
-            </li>
-
-            <li class="insta-post-item">
-              <a
-                href="https://youtube.com/@aqsagroupfoundation?si=9cEXVra822lSI2g"
-                class="insta-post-link"
-                target="_blank"
-              >
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png"
-                  width="320"
-                  height="300"
-                  loading="lazy"
-                  alt="Aqsa Group Foundation Channel Logo"
-                  class="img-cover"
+                  class=""
                 />
                 <ion-icon name="logo-youtube"></ion-icon>
               </a>
@@ -947,7 +1024,7 @@
                   height="300"
                   loading="lazy"
                   alt="Video Thumbnail 3"
-                  class="img-cover"
+                  class=""
                 />
                 <ion-icon name="logo-youtube"></ion-icon>
               </a>
@@ -965,7 +1042,7 @@
                   height="300"
                   loading="lazy"
                   alt="Video Thumbnail 4"
-                  class="img-cover"
+                  class=""
                 />
                 <ion-icon name="logo-youtube"></ion-icon>
               </a>
@@ -983,7 +1060,7 @@
                   height="300"
                   loading="lazy"
                   alt="Video Thumbnail 5"
-                  class="img-cover"
+                  class=""
                 />
                 <ion-icon name="logo-youtube"></ion-icon>
               </a>
@@ -997,41 +1074,39 @@
     - #FOOTER
   -->
 
-  <footer class="footer">
-    <div class="container">
-      <ul class="footer-list">
-        <li>
-          <a href="#" class="footer-link">Terms of use</a>
-        </li>
-  
-        <li>
-          <a href="#" class="footer-link">Privacy & Policy</a>
-        </li>
-      </ul>
-  
-      <p class="copyright">
-        &#169; Copyright Aqsa Group Foundation.
-        All Rights Reserved.
-      </p>
-  
-      <div class="developed-by">
-        <p>Developed by:</p>
-        <a
-          href="https://tekisky.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            src="https://tekisky.com/assets/WhatsApp_Image_2024-04-30_at_12.39.09_86de1ffc-removebg-preview-2SydUlQw.png"
-            alt="Tekisky Logo"
-            class="footerlogo"
-            width="100" 
-          />
-        </a>
+    <footer class="footer">
+      <div class="container">
+        <ul class="footer-list">
+          <li>
+            <a href="#" class="footer-link">Terms of use</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Privacy & Policy</a>
+          </li>
+        </ul>
+
+        <p class="copyright">
+          &#169; Copyright Aqsa Group Foundation. All Rights Reserved.
+        </p>
+
+        <div class="developed-by">
+          <p>Developed by:</p>
+          <a
+            href="https://tekisky.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="https://tekisky.com/assets/WhatsApp_Image_2024-04-30_at_12.39.09_86de1ffc-removebg-preview-2SydUlQw.png"
+              alt="Tekisky Logo"
+              class="footerlogo"
+              width="100"
+            />
+          </a>
+        </div>
       </div>
-    </div>
-  </footer>
-  
+    </footer>
 
     <!-- 
     - custom js link

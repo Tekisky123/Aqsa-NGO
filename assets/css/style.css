@@ -428,7 +428,7 @@ body {
   background-image: url("../images/banner4.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position:center;
+  background-position: center;
   z-index: 1;
 }
 
@@ -635,13 +635,12 @@ body {
 .cta-banner {
   background-color: var(--light-gray);
 }
-.cta-section-text{
+.cta-section-text {
   color: var(--white);
   font-weight: var(--fw-600);
   line-height: 1.2;
   margin-block-end: 25px;
 }
-
 
 /*-----------------------------------*\
   #SERVICE
@@ -720,7 +719,10 @@ body {
 .donate-list {
   display: grid;
   gap: 30px; /* Adjust gap as needed */
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Responsive grid */
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(280px, 1fr)
+  ); /* Responsive grid */
 }
 
 .donate-card {
@@ -782,7 +784,6 @@ body {
   color: var(--white_50);
   font-size: var(--fs-10);
 }
-
 
 .testi-banner {
   margin-top: 40px;
@@ -862,9 +863,8 @@ body {
   letter-spacing: -1px;
 }
 
-.event-card .card-text {
-  font-family: var(--ff-inter);
-  margin-block: 5px 30px;
+.card-text {
+  margin: 20px 0;
 }
 
 .event .btn-secondary {
@@ -971,6 +971,12 @@ body {
 
 .copyright-link {
   display: inline-block;
+}
+.developed-by {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 /*-----------------------------------*\
@@ -1482,5 +1488,132 @@ body {
   .footer .container {
     margin-inline: 30px;
     width: auto;
+  }
+}
+
+.contact-us {
+  background-color: var(--secondary-color);
+  padding: 40px 20px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--pistachio);
+  margin-bottom: 15px;
+}
+
+.contact-description {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 30px;
+  color: var(--text-color);
+}
+
+.contact-content {
+  display: flex;
+  justify-content: space-between; /* Side-by-side layout */
+  gap: 20px; /* Space between left and right sections */
+}
+
+.contact-details {
+  flex: 1; /* Take up remaining space */
+  background: white;
+  border-radius: var(--border-radius);
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form {
+  flex: 1; /* Take up remaining space */
+  background: white;
+  border-radius: var(--border-radius);
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.details-title,
+.helplines-title,
+.form-title {
+  font-size: 2.8rem;
+  color: var(--pistachio);
+  margin-bottom: 10px;
+  border-bottom: 2px solid var(--pistachio);
+  padding-bottom: 5px;
+}
+
+.details,
+.helpline-item {
+  font-size: 1.5rem;
+  margin: 5px 0;
+  color: var(--text-color);
+}
+
+.email-link {
+  color: var(--pistachio);
+  text-decoration: none;
+}
+
+.email-link:hover {
+  text-decoration: underline;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.submit-button {
+  margin: auto;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-title {
+    font-size: 2.5rem;
+  }
+
+  .contact-description {
+    font-size: 1.5rem;
+  }
+
+  .contact-content {
+    flex-direction: column; /* Stack vertically on small screens */
+  }
+
+  .contact-details,
+  .contact-form {
+    width: 100%; /* Full width on small screens */
+    margin-bottom: 20px; /* Space between stacked sections */
+  }
+
+  .details-title,
+  .helplines-title,
+  .form-title {
+    font-size: 1.8rem;
   }
 }
