@@ -425,10 +425,10 @@ body {
   display: grid;
   align-items: center;
   position: relative;
-  background-image: url("../images/banner5.jpg");
+  background-image: url("../images/banner4.jpg");
   background-repeat: no-repeat;
-  background-size: contain;
-  background-position: left;
+  background-size: cover;
+  background-position:center;
   z-index: 1;
 }
 
@@ -547,7 +547,7 @@ body {
   transform: rotate(0.25turn);
   position: absolute;
   top: 55%;
-  left: 100%;
+  left: 80%;
   z-index: -1;
 }
 
