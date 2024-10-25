@@ -425,7 +425,7 @@ body {
   display: grid;
   align-items: center;
   position: relative;
-  background-image: url("../images/banner4.jpg");
+  background-image: url("../images/mainbanner.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1203,7 +1203,7 @@ body {
 
   .hero {
     position: relative;
-    background-image: url("../images/banner4.jpg");
+    background-image: url("../images/mainbanner.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: left;
